@@ -1,0 +1,10 @@
+/***********************************
+* FIS Harvester Scripts
+* CU Boulder
+*
+************************************/
+
+These script files contain the necessary configuration to run the 
+VIVO Harvester based on the ingest scripts employed by FIS's 
+selenium scripts.
+

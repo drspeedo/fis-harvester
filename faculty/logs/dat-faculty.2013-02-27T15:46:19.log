@@ -1,0 +1,42 @@
+2013-02-27 15:46:20.192 INFO  [o.v.h.f.CSVFetch] CSVFetch: Start
+2013-02-27 15:46:20.195 DEBUG [o.v.h.u.a.ArgList] running CSVFetch
+2013-02-27 15:46:20.196 DEBUG [o.v.h.u.a.ArgList] command line args: -X csvfetch.config.xml
+2013-02-27 15:46:20.203 DEBUG [o.v.h.u.a.ArgList] config file args: --propertyPrefix ws_fm_ --file /Users/stwi5210/fis_faculty_members.dat --uriPrefix fis_ --uriParameter FISID --type FACULTY --output /Users/stwi5210/Source/fis-harvester/faculty/harvested-data.model.xml --seperated , --namespace http://vivo.colorado.edu/
+2013-02-27 15:46:20.215 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - 'data/harvested-data/'
+2013-02-27 15:46:20.216 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-02-27 15:46:22.961 INFO  [o.v.h.f.CSVFetch] CSVFetch: End
+2013-02-27 15:46:24.124 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: Start
+2013-02-27 15:46:24.127 DEBUG [o.v.h.u.a.ArgList] running JenaConnect
+2013-02-27 15:46:24.127 DEBUG [o.v.h.u.a.ArgList] command line args: -X faculty.config.xml
+2013-02-27 15:46:24.135 DEBUG [o.v.h.u.a.ArgList] config file args: --jena /Users/stwi5210/Source/fis-harvester/faculty/harvested-data.model.xml --query PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX owl:   <http://www.w3.org/2002/07/owl#> PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#> PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> PREFIX swrl:  <http://www.w3.org/2003/11/swrl#> PREFIX swrlb: <http://www.w3.org/2003/11/swrlb#> PREFIX bibo: <http://purl.org/ontology/bibo/> PREFIX dcelem: <http://purl.org/dc/elements/1.1/> PREFIX dcterms: <http://purl.org/dc/terms/> PREFIX event: <http://purl.org/NET/c4dm/event.owl#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX geo: <http://aims.fao.org/aos/geopolitical.owl#> PREFIX pvs: <http://vivoweb.org/ontology/provenance-support#> PREFIX ero: <http://purl.obolibrary.org/obo/> PREFIX scires: <http://vivoweb.org/ontology/scientific-research#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX j.1: <http://vitro.mannlib.cornell.edu/ns/vitro/public#> PREFIX core: <http://vivoweb.org/ontology/core#> PREFIX vlocal: </ontology/vivo-fis#>  Construct {  ?person <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .  ?person <http://www.w3.org/2000/01/rdf-schema#label> ?label .  ?person <http://xmlns.com/foaf/0.1/firstName> ?firstName .  ?person <http://vivoweb.org/ontology/core#middleName> ?middleName .  ?person <http://xmlns.com/foaf/0.1/lastName> ?lastName .  ?person  <http://vivoweb.org/ontology/core#preferredTitle> ?moniker .  ?person <http://vivoweb.org/ontology/core#email> ?email .  ?person </ontology/vivo-fis#fisId> ?fisId .  ?person </ontology/vivo-fis#uuid> ?uuid .  ?person <http://vivoweb.org/ontology/core#freetextKeyword> ?keywords . }   Where {  ?person <http://vivo.colorado.edu/ws_fm_LABEL> ?label .  ?person <http://vivo.colorado.edu/ws_fm_FIRSTNAME> ?firstName .  optional { ?person <http://vivo.colorado.edu/ws_fm_MIDDLENAME> ?middleName . }  ?person <http://vivo.colorado.edu/ws_fm_LASTNAME> ?lastName .  optional { ?person <http://vivo.colorado.edu/ws_fm_MONIKER> ?moniker . }  optional { ?person <http://vivo.colorado.edu/ws_fm_EMAIL> ?email . }  optional { ?person <http://vivo.colorado.edu/ws_fm_KEYWORDS> ?keywords . }  ?person <http://vivo.colorado.edu/ws_fm_FISID> ?fisId .  ?person <http://vivo.colorado.edu/ws_fm_UUID> ?uuid . } --fileOutput data/constructed-data
+2013-02-27 15:46:24.141 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - 'data/harvested-data/'
+2013-02-27 15:46:24.142 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-02-27 15:46:24.681 INFO  [o.v.h.u.r.JenaConnect] Outputting to the specified location
+2013-02-27 15:46:24.727 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: DEFAULT1403730983
+2013-02-27 15:46:24.727 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT14037309838587853981623018285.tdb  
+2013-02-27 15:46:24.728 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT14037309838587853981623018285.tdb
+2013-02-27 15:46:26.721 WARN  [c.h.h.j.x.i.BaseXMLWriter] Namespace prefix 'j.1' is reserved by Jena.
+2013-02-27 15:46:27.269 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: End
+2013-02-27 15:46:27.281 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT14037309838587853981623018285.tdb  
+2013-02-27 15:46:28.243 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: Start
+2013-02-27 15:46:28.247 DEBUG [o.v.h.u.a.ArgList] running JenaConnect
+2013-02-27 15:46:28.247 DEBUG [o.v.h.u.a.ArgList] command line args: -X delete.config.xml
+2013-02-27 15:46:28.252 DEBUG [o.v.h.u.a.ArgList] config file args: --jena /Users/stwi5210/Source/fis-harvester/faculty/vivo.model.xml --truncate 1
+2013-02-27 15:46:28.259 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-02-27 15:46:28.259 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_fm_construct'
+2013-02-27 15:46:28.260 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-02-27 15:46:28.260 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-02-27 15:46:28.260 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-02-27 15:46:28.260 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-02-27 15:46:28.937 INFO  [o.v.h.u.r.JenaConnect] Removing all triples
+2013-02-27 15:46:32.991 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: End
+2013-02-27 15:46:33.709 INFO  [o.v.h.t.Transfer] Transfer: Start
+2013-02-27 15:46:33.713 DEBUG [o.v.h.u.a.ArgList] running Transfer
+2013-02-27 15:46:33.714 DEBUG [o.v.h.u.a.ArgList] command line args: -o vivo.model.xml -r data/constructed-data
+2013-02-27 15:46:33.728 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-02-27 15:46:33.728 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_fm_construct'
+2013-02-27 15:46:33.728 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-02-27 15:46:33.728 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-02-27 15:46:33.728 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-02-27 15:46:33.729 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-02-27 15:46:39.041 INFO  [o.v.h.t.Transfer] Transfer: End
