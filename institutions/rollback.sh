@@ -19,7 +19,7 @@ export DATE=`date +%Y-%m-%d'T'%T`
 # Add harvester binaries to path for execution
 # The tools within this script refer to binaries supplied within the harvester
 #	Since they can be located in another directory their path should be
-#	included within the classpath and the path environment variables.
+#	included within the classpath and the path enviromental variables.
 export PATH=$PATH:$HARVESTER_INSTALL_DIR/bin
 export CLASSPATH=$CLASSPATH:$HARVESTER_INSTALL_DIR/bin/harvester.jar:$HARVESTER_INSTALL_DIR/bin/dependency/*
 export CLASSPATH=$CLASSPATH:$HARVESTER_INSTALL_DIR/build/harvester.jar:$HARVESTER_INSTALL_DIR/build/dependency/*
@@ -32,51 +32,17 @@ set -e
 
 # Supply the location of the detailed log file which is generated during the script.
 #	If there is an issue with a harvest, this file proves invaluable in finding
-#	a solution to the problem. It has become common practice in addressing a problem
-#	to request this file. The passwords and usernames are filtered out of this file
+#	a solution to the problem. I has become common practice in addressing a problem
+#	to request this file. The passwords and user-names are filter out of this file
 #	to prevent these logs from containing sensitive information.
 echo "Full Logging in $HARVEST_NAME.$DATE.log"
-if [ ! -d logs ]; then
-  mkdir logs
-fi
-cd logs
-touch $HARVEST_NAME.$DATE.log
-ln -sf $HARVEST_NAME.$DATE.log $HARVEST_NAME.latest.log
-cd ..
 
-#clear old data
-# For a fresh harvest, the removal of the previous information maintains data integrity.
-#	If you are continuing a partial run or wish to use the old and already retrieved
-#	data, you will want to comment out this line since it could prevent you from having
-# 	the required harvest data.  
-rm -rf data
-
-
-# Import CSV
-# Takes the data from a comma-separated-values file and places it in a rdf using
-# the methods employed by VIVO's CSV to RDF (and similar requirements)
-harvester-csvfetch -X csvfetch.config.xml
-
-
-# Execute Translate using SPARQL
-# Modify our imported data using SPARQL into a new construct model
-harvester-jenaconnect -X subjectArea.config.xml
-
-# Backup constructed data
-
-cp data/constructed-data ../backups/subjectArea-data-$DATE
-cp data/constructed-data ../backups/subjectArea-data-last
 
 # Remove the original construct Model
 harvester-jenaconnect -X delete.config.xml
 
+# Load new data into construct Model TODO: Change to Archived Location
+harvester-transfer -o vivo.model.xml -r ../backups/faculty-data-last
 
-# Load new data into construct Model
-harvester-transfer -o vivo.model.xml -r data/constructed-data
 
-
-#Output some counts
-SUBJ=`cat data/constructed-data | grep 'http://www.w3.org/2004/02/skos/core#Concept' | wc -l`
-echo "Imported $SUBJ subjects"
-
-echo 'Harvest completed successfully'
+echo 'Harvest reversal completed successfully'

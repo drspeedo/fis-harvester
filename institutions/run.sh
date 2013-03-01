@@ -13,7 +13,7 @@
 #	uncompressing the tar.gz the setting is available to be changed
 #	and should agree with the installation location
 HARVESTER_INSTALL_DIR=~/Source/VIVO-Harvester
-export HARVEST_NAME=dat-subjectArea
+export HARVEST_NAME=dat-institutions
 export DATE=`date +%Y-%m-%d'T'%T`
 
 # Add harvester binaries to path for execution
@@ -60,12 +60,12 @@ harvester-csvfetch -X csvfetch.config.xml
 
 # Execute Translate using SPARQL
 # Modify our imported data using SPARQL into a new construct model
-harvester-jenaconnect -X subjectArea.config.xml
+harvester-jenaconnect -X institutions.config.xml
 
 # Backup constructed data
 
-cp data/constructed-data ../backups/subjectArea-data-$DATE
-cp data/constructed-data ../backups/subjectArea-data-last
+cp data/constructed-data ../backups/institutions-data-$DATE
+cp data/constructed-data ../backups/institutions-data-last
 
 # Remove the original construct Model
 harvester-jenaconnect -X delete.config.xml
@@ -76,7 +76,7 @@ harvester-transfer -o vivo.model.xml -r data/constructed-data
 
 
 #Output some counts
-SUBJ=`cat data/constructed-data | grep 'http://www.w3.org/2004/02/skos/core#Concept' | wc -l`
-echo "Imported $SUBJ subjects"
+INST=`cat data/constructed-data | grep 'http://vivoweb.org/ontology/core#University' | wc -l`
+echo "Imported $INST universities"
 
 echo 'Harvest completed successfully'
