@@ -13,7 +13,7 @@
 #	uncompressing the tar.gz the setting is available to be changed
 #	and should agree with the installation location
 HARVESTER_INSTALL_DIR=~/Source/VIVO-Harvester
-export HARVEST_NAME=dat-departments
+export HARVEST_NAME=dat-departments-rollback
 export DATE=`date +%Y-%m-%d'T'%T`
 
 # Add harvester binaries to path for execution

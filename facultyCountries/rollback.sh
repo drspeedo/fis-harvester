@@ -13,7 +13,7 @@
 #	uncompressing the tar.gz the setting is available to be changed
 #	and should agree with the installation location
 HARVESTER_INSTALL_DIR=~/Source/VIVO-Harvester
-export HARVEST_NAME=dat-subjectArea
+export HARVEST_NAME=dat-faculty-countries-rollback
 export DATE=`date +%Y-%m-%d'T'%T`
 
 # Add harvester binaries to path for execution
@@ -42,7 +42,7 @@ echo "Full Logging in $HARVEST_NAME.$DATE.log"
 harvester-jenaconnect -X delete.config.xml
 
 # Load new data into construct Model TODO: Change to Archived Location
-harvester-transfer -o vivo.model.xml -r ../backups/faculty-data-last
+harvester-transfer -o vivo.model.xml -r ../backups/facultyCountries-data-last
 
 
 echo 'Harvest reversal completed successfully'

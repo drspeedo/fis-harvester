@@ -69,8 +69,11 @@ harvester-sparqltranslator -X facultyCountries.config.xml
 # Save a copy of the model for restoration
 harvester-transfer -i vivo.model.xml -d data/constructed-data
 
-#Output some counts
+# Create a backup
+cp data/constructed-data ../backups/facultyCountries-data-$DATE
+cp data/constructed-data ../backups/facultyCountries-data-last
 
+#Output some counts
 FAC=`cat data/constructed-data | grep '<rdf:Description rdf:about="http://vivo.colorado.edu/fsid_' | wc -l`
 COUNTRIES=`cat data/constructed-data | grep 'geographicFocus rdf:resource="http://aims.fao.org/aos/geopolitical.owl#' | wc -l`
 
