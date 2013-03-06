@@ -76,15 +76,8 @@ harvester-transfer -i vivo.model.xml -d data/constructed-data
 
 # Backup constructed data
 
-#cp data/constructed-data ../backups/Department-data-$DATE
-#cp data/constructed-data ../backups/Department-data-last
-
-#cp data/constructed-data-sub ../backups/Department-SUB-data-$DATE
-#cp data/constructed-data-sub ../backups/Department-SUB-data-last
-
-#cp data/constructed-data-url ../backups/Department-URL-data-$DATE
-#cp data/constructed-data-url ../backups/Department-URL-data-last
-
+cp data/constructed-data ../backups/department-data-$DATE
+cp data/constructed-data ../backups/department-data-last
 
 
 #Output some counts
