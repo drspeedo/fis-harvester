@@ -1,0 +1,95 @@
+2013-02-28 11:23:00.029 INFO  [o.v.h.f.CSVFetch] CSVFetch: Start
+2013-02-28 11:23:00.032 DEBUG [o.v.h.u.a.ArgList] running CSVFetch
+2013-02-28 11:23:00.033 DEBUG [o.v.h.u.a.ArgList] command line args: -X csvfetch.config.xml
+2013-02-28 11:23:00.040 DEBUG [o.v.h.u.a.ArgList] config file args: --propertyPrefix ws_d_ --file /Users/stwi5210/fis_departments.dat --uriPrefix deptid_ --uriParameter DEPTID --type DEPT --output /Users/stwi5210/Source/fis-harvester/departments/harvested-data.model.xml --seperated , --namespace http://vivo.colorado.edu/
+2013-02-28 11:23:00.053 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - 'data/harvested-data/'
+2013-02-28 11:23:00.053 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-02-28 11:23:01.001 INFO  [o.v.h.f.CSVFetch] CSVFetch: End
+2013-02-28 11:23:01.963 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: Start
+2013-02-28 11:23:01.966 DEBUG [o.v.h.u.a.ArgList] running JenaConnect
+2013-02-28 11:23:01.967 DEBUG [o.v.h.u.a.ArgList] command line args: -X departments.config.xml
+2013-02-28 11:23:01.973 DEBUG [o.v.h.u.a.ArgList] config file args: --jena /Users/stwi5210/Source/fis-harvester/departments/harvested-data.model.xml --query PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX core: <http://vivoweb.org/ontology/core#> 
+PREFIX vlocal: <http://vivo.colorado.edu/ontology/vivo-fis#> 
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#>  
+Construct {  
+  ?dept <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?deptClass .  
+  ?dept rdfs:label ?label .  
+  ?dept vlocal:deptId ?deptId .  
+  ?dept vitro:mostSpecificType ?deptClass . 
+}  
+Where {  
+  ?dept <http://vivo.colorado.edu/ws_d_NAME> ?label .  
+  ?dept <http://vivo.colorado.edu/ws_d_DEPTID> ?deptId .  
+  ?dept <http://vivo.colorado.edu/ws_d_TYPE> ?deptTypeURI .  
+  ?dept <http://vivo.colorado.edu/ws_d_MONIKER> ?moniker .  
+  ?deptClass rdfs:subClassOf foaf:Organization .  
+  FILTER (fn:matches(?deptTypeURI, str(?deptClass))) 
+} --fileOutput data/constructed-data
+2013-02-28 11:23:01.977 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - 'data/harvested-data/'
+2013-02-28 11:23:01.978 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-02-28 11:23:02.489 INFO  [o.v.h.u.r.JenaConnect] Outputting to the specified location
+2013-02-28 11:23:02.525 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: DEFAULT466544454
+2013-02-28 11:23:02.526 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT4665444549052461355364593960.tdb  
+2013-02-28 11:23:02.526 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT4665444549052461355364593960.tdb
+2013-02-28 11:23:02.731 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: End
+2013-02-28 11:23:02.740 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT4665444549052461355364593960.tdb  
+2013-02-28 11:23:03.353 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: Start
+2013-02-28 11:23:03.356 DEBUG [o.v.h.u.a.ArgList] running JenaConnect
+2013-02-28 11:23:03.357 DEBUG [o.v.h.u.a.ArgList] command line args: -X delete.config.xml
+2013-02-28 11:23:03.361 DEBUG [o.v.h.u.a.ArgList] config file args: --jena /Users/stwi5210/Source/fis-harvester/departments/vivo.model.xml --truncate 1
+2013-02-28 11:23:03.367 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-02-28 11:23:03.367 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_d_construct'
+2013-02-28 11:23:03.367 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-02-28 11:23:03.367 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-02-28 11:23:03.367 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-02-28 11:23:03.367 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-02-28 11:23:03.915 INFO  [o.v.h.u.r.JenaConnect] Removing all triples
+2013-02-28 11:23:03.968 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: End
+2013-02-28 11:23:04.572 INFO  [o.v.h.t.Transfer] Transfer: Start
+2013-02-28 11:23:04.575 DEBUG [o.v.h.u.a.ArgList] running Transfer
+2013-02-28 11:23:04.576 DEBUG [o.v.h.u.a.ArgList] command line args: -o vivo.model.xml -r data/constructed-data
+2013-02-28 11:23:04.587 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-02-28 11:23:04.587 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_d_construct'
+2013-02-28 11:23:04.588 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-02-28 11:23:04.588 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-02-28 11:23:04.588 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-02-28 11:23:04.588 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-02-28 11:23:05.174 INFO  [o.v.h.t.Transfer] Transfer: End
+2013-02-28 11:23:05.795 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: Start
+2013-02-28 11:23:05.798 DEBUG [o.v.h.u.a.ArgList] running JenaConnect
+2013-02-28 11:23:05.798 DEBUG [o.v.h.u.a.ArgList] command line args: -X departments-sub.config.xml
+2013-02-28 11:23:05.803 DEBUG [o.v.h.u.a.ArgList] config file args: --jena /Users/stwi5210/Source/fis-harvester/departments/vivo.model.xml --query PREFIX core: <http://vivoweb.org/ontology/core#>
+PREFIX vlocal: <http://vivo.colorado.edu/ontology/vivo-fis#> 
+Construct {   
+  ?subDept core:subOrganizationWithin ?parentDept .     
+  ?parentDept core:hasSubOrganization ?subDept  }   
+Where {    
+  ?subDept <http://vivo.colorado.edu/ws_d_ORGANIZATIONWITHIN> ?parentId .     
+  ?parentDept vlocal:deptId ?parentId  
+} --fileOutput data/constructed-data-sub
+2013-02-28 11:23:05.808 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-02-28 11:23:05.808 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_d_construct'
+2013-02-28 11:23:05.808 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-02-28 11:23:05.808 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-02-28 11:23:05.808 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-02-28 11:23:05.808 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-02-28 11:23:06.364 INFO  [o.v.h.u.r.JenaConnect] Outputting to the specified location
+2013-02-28 11:23:06.392 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: DEFAULT777871476
+2013-02-28 11:23:06.392 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT7778714762255075273854571241.tdb  
+2013-02-28 11:23:06.392 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT7778714762255075273854571241.tdb
+2013-02-28 11:23:06.696 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: End
+2013-02-28 11:23:06.705 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT7778714762255075273854571241.tdb  
+2013-02-28 11:23:07.317 INFO  [o.v.h.t.Transfer] Transfer: Start
+2013-02-28 11:23:07.321 DEBUG [o.v.h.u.a.ArgList] running Transfer
+2013-02-28 11:23:07.322 DEBUG [o.v.h.u.a.ArgList] command line args: -o vivo.model.xml -r data/constructed-data-sub
+2013-02-28 11:23:07.333 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-02-28 11:23:07.333 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_d_construct'
+2013-02-28 11:23:07.333 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-02-28 11:23:07.333 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-02-28 11:23:07.333 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-02-28 11:23:07.334 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-02-28 11:23:07.927 INFO  [o.v.h.t.Transfer] Transfer: End

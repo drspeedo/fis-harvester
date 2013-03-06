@@ -1,0 +1,57 @@
+2013-03-05 11:39:07.189 INFO  [o.v.h.f.CSVFetch] CSVFetch: Start
+2013-03-05 11:39:07.192 DEBUG [o.v.h.u.a.ArgList] running CSVFetch
+2013-03-05 11:39:07.193 DEBUG [o.v.h.u.a.ArgList] command line args: -X csvfetch.config.xml
+2013-03-05 11:39:07.200 DEBUG [o.v.h.u.a.ArgList] config file args: --propertyPrefix ws_d_ --file /Users/stwi5210/fis_departments.dat --uriPrefix deptid_ --uriParameter DEPTID --type DEPT --output /Users/stwi5210/Source/fis-harvester/departments/harvested-data.model.xml --seperated , --namespace http://vivo.colorado.edu/
+2013-03-05 11:39:07.210 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - '/Users/stwi5210/Source/fis-harvester/departments/data/harvested-data/'
+2013-03-05 11:39:07.210 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-03-05 11:39:08.342 INFO  [o.v.h.f.CSVFetch] CSVFetch: End
+2013-03-05 11:39:09.317 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: Start
+2013-03-05 11:39:09.321 DEBUG [o.v.h.u.a.ArgList] running JenaConnect
+2013-03-05 11:39:09.321 DEBUG [o.v.h.u.a.ArgList] command line args: -X delete.config.xml
+2013-03-05 11:39:09.326 DEBUG [o.v.h.u.a.ArgList] config file args: --jena /Users/stwi5210/Source/fis-harvester/departments/vivo.model.xml --truncate 1
+2013-03-05 11:39:09.331 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-05 11:39:09.331 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_d_construct'
+2013-03-05 11:39:09.331 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-05 11:39:09.331 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-05 11:39:09.331 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-05 11:39:09.331 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-05 11:39:09.491 ERROR [o.v.h.u.r.JenaConnect] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Too many connections
+2013-03-05 11:39:09.497 DEBUG [o.v.h.u.r.JenaConnect] Stacktrace:
+java.io.IOException: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Too many connections
+	at org.vivoweb.harvester.util.repo.DBJenaConnect.buildConnection(DBJenaConnect.java:91) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.repo.SDBJenaConnect.<init>(SDBJenaConnect.java:80) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.repo.JenaConnect.build(JenaConnect.java:145) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.repo.JenaConnect.parseConfig(JenaConnect.java:97) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.repo.JenaConnect.parseConfig(JenaConnect.java:119) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.repo.JenaConnect.run(JenaConnect.java:864) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.repo.JenaConnect.main(JenaConnect.java:891) ~[harvester.jar:na]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Too many connections
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.6.0_41]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39) ~[na:1.6.0_41]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27) ~[na:1.6.0_41]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513) ~[na:1.6.0_41]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.Util.getInstance(Util.java:382) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1013) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3603) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3535) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:934) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4104) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1299) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2338) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2371) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2163) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.15.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.6.0_41]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39) ~[na:1.6.0_41]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27) ~[na:1.6.0_41]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513) ~[na:1.6.0_41]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:378) ~[mysql-connector-java-5.1.15.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305) ~[mysql-connector-java-5.1.15.jar:na]
+	at java.sql.DriverManager.getConnection(DriverManager.java:582) ~[na:1.6.0_41]
+	at java.sql.DriverManager.getConnection(DriverManager.java:185) ~[na:1.6.0_41]
+	at org.vivoweb.harvester.util.repo.DBJenaConnect.buildConnection(DBJenaConnect.java:89) ~[harvester.jar:na]
+	... 6 common frames omitted
+2013-03-05 11:39:09.499 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: End

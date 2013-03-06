@@ -1,0 +1,86 @@
+2013-03-06 11:16:45.927 INFO  [o.v.h.f.CSVFetch] CSVFetch: Start
+2013-03-06 11:16:45.930 DEBUG [o.v.h.u.a.ArgList] running CSVFetch
+2013-03-06 11:16:45.931 DEBUG [o.v.h.u.a.ArgList] command line args: -X csvfetch.config.xml
+2013-03-06 11:16:45.938 DEBUG [o.v.h.u.a.ArgList] config file args: --propertyPrefix ws_fm2r_ --file /Users/stwi5210/fis_faculty_member_regions.dat --uriPrefix fsid_ --uriParameter FISID --type REGION --output harvested-data.model.xml --seperated , --namespace http://vivo.colorado.edu/
+2013-03-06 11:16:45.947 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - 'data/harvested-data/'
+2013-03-06 11:16:45.947 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-03-06 11:16:47.120 INFO  [o.v.h.f.CSVFetch] CSVFetch: End
+2013-03-06 11:16:48.070 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: Start
+2013-03-06 11:16:48.073 DEBUG [o.v.h.u.a.ArgList] running JenaConnect
+2013-03-06 11:16:48.074 DEBUG [o.v.h.u.a.ArgList] command line args: -X delete.config.xml
+2013-03-06 11:16:48.079 DEBUG [o.v.h.u.a.ArgList] config file args: --jena vivo.model.xml --truncate 1
+2013-03-06 11:16:48.084 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-06 11:16:48.084 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_fm2r_construct'
+2013-03-06 11:16:48.084 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-06 11:16:48.085 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-06 11:16:48.085 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-06 11:16:48.085 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-06 11:16:48.661 INFO  [o.v.h.u.r.JenaConnect] Removing all triples
+2013-03-06 11:16:48.715 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: End
+2013-03-06 11:16:49.342 INFO  [o.v.h.t.SPARQLTranslator] SPARQLTranslator: Start
+2013-03-06 11:16:49.345 DEBUG [o.v.h.u.a.ArgList] running SPARQLTranslator
+2013-03-06 11:16:49.346 DEBUG [o.v.h.u.a.ArgList] command line args: -X facultyRegions.config.xml
+2013-03-06 11:16:49.351 DEBUG [o.v.h.u.a.ArgList] config file args: --input harvested-data.model.xml --input vivo-inf.model.xml --sparqlConstruct create-query --output vivo.model.xml
+2013-03-06 11:16:49.357 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: urn&#58;x-arq&#58;UnionGraph
+2013-03-06 11:16:49.384 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph8160002825873451570.tdb  
+2013-03-06 11:16:49.384 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph8160002825873451570.tdb
+2013-03-06 11:16:49.879 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - 'data/harvested-data/'
+2013-03-06 11:16:49.879 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-03-06 11:16:50.458 TRACE [o.v.h.t.SPARQLTranslator] Input Model http://vivoweb.org/harvester/model/translate/model1 with 1858 statements
+2013-03-06 11:16:50.460 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-06 11:16:50.461 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/default/vitro-kb-inf'
+2013-03-06 11:16:50.461 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-06 11:16:50.461 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-06 11:16:50.461 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-06 11:16:50.461 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-06 11:16:51.130 TRACE [o.v.h.t.SPARQLTranslator] Input Model http://vivoweb.org/harvester/model/translate/model2 with 4178 statements
+2013-03-06 11:16:51.134 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-06 11:16:51.134 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_fm2r_construct'
+2013-03-06 11:16:51.134 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-06 11:16:51.135 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-06 11:16:51.135 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-06 11:16:51.135 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-06 11:16:51.169 TRACE [o.v.h.t.SPARQLTranslator] PREFIX core: <http://vivoweb.org/ontology/core#>  PREFIX fn: <http://www.w3.org/2005/xpath-functions#>  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   Construct {     ?person core:geographicFocus ?region .  }  Where  {       ?person <${namespace}ws_fm2r_URI> ?regionURI .      ?region a core:TransnationalRegion .       FILTER (fn:matches(?regionURI, str(?region)))  }
+2013-03-06 11:16:51.229 TRACE [o.v.h.t.SPARQLTranslator] Input Jena's Total Size: 6036
+2013-03-06 11:16:51.229 DEBUG [o.v.h.t.SPARQLTranslator] Executing Query
+2013-03-06 11:16:51.229 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: DEFAULT78394557
+2013-03-06 11:16:51.229 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT783945575132725834251854826.tdb  
+2013-03-06 11:16:51.230 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT783945575132725834251854826.tdb
+2013-03-06 11:16:51.281 ERROR [o.v.h.t.SPARQLTranslator] Encountered " "<" "< "" at line 1, column 247.
+Was expecting one of:
+    <IRIref> ...
+    <PNAME_NS> ...
+    <PNAME_LN> ...
+    <VAR1> ...
+    <VAR2> ...
+    "a" ...
+    "(" ...
+    "!" ...
+    "^" ...
+    
+2013-03-06 11:16:51.284 DEBUG [o.v.h.t.SPARQLTranslator] Stacktrace:
+com.hp.hpl.jena.query.QueryParseException: Encountered " "<" "< "" at line 1, column 247.
+Was expecting one of:
+    <IRIref> ...
+    <PNAME_NS> ...
+    <PNAME_LN> ...
+    <VAR1> ...
+    <VAR2> ...
+    "a" ...
+    "(" ...
+    "!" ...
+    "^" ...
+    
+	at com.hp.hpl.jena.sparql.lang.ParserARQ.perform(ParserARQ.java:86) ~[arq-2.8.7.jar:na]
+	at com.hp.hpl.jena.sparql.lang.ParserARQ.parse(ParserARQ.java:39) ~[arq-2.8.7.jar:na]
+	at com.hp.hpl.jena.query.QueryFactory.parse(QueryFactory.java:132) ~[arq-2.8.7.jar:na]
+	at com.hp.hpl.jena.query.QueryFactory.create(QueryFactory.java:69) ~[arq-2.8.7.jar:na]
+	at com.hp.hpl.jena.query.QueryFactory.create(QueryFactory.java:40) ~[arq-2.8.7.jar:na]
+	at org.vivoweb.harvester.util.repo.JenaConnect.buildQueryExec(JenaConnect.java:459) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.repo.JenaConnect.executeConstructQuery(JenaConnect.java:522) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.repo.JenaConnect.executeConstructQuery(JenaConnect.java:510) ~[harvester.jar:na]
+	at org.vivoweb.harvester.translate.SPARQLTranslator.execute(SPARQLTranslator.java:124) ~[harvester.jar:na]
+	at org.vivoweb.harvester.translate.SPARQLTranslator.main(SPARQLTranslator.java:199) ~[harvester.jar:na]
+2013-03-06 11:16:51.285 INFO  [o.v.h.t.SPARQLTranslator] SPARQLTranslator: End
+2013-03-06 11:16:51.298 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph8160002825873451570.tdb  
+2013-03-06 11:16:51.306 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT783945575132725834251854826.tdb  

@@ -1,0 +1,100 @@
+2013-03-06 10:02:16.969 INFO  [o.v.h.f.CSVFetch] CSVFetch: Start
+2013-03-06 10:02:16.972 DEBUG [o.v.h.u.a.ArgList] running CSVFetch
+2013-03-06 10:02:16.973 DEBUG [o.v.h.u.a.ArgList] command line args: -X csvfetch.config.xml
+2013-03-06 10:02:16.980 DEBUG [o.v.h.u.a.ArgList] config file args: --propertyPrefix ws_fm2sa_ --file /Users/stwi5210/fis_faculty_member_subject_areas.dat --uriPrefix fsid_ --uriParameter FISID --type FACSUB --output /Users/stwi5210/Source/fis-harvester/facultySubjectAreas/harvested-data.model.xml --seperated , --namespace http://vivo.colorado.edu/
+2013-03-06 10:02:16.990 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - 'data/harvested-data/'
+2013-03-06 10:02:16.991 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-03-06 10:02:19.585 INFO  [o.v.h.f.CSVFetch] CSVFetch: End
+2013-03-06 10:02:20.609 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: Start
+2013-03-06 10:02:20.613 DEBUG [o.v.h.u.a.ArgList] running JenaConnect
+2013-03-06 10:02:20.613 DEBUG [o.v.h.u.a.ArgList] command line args: -X delete.config.xml
+2013-03-06 10:02:20.618 DEBUG [o.v.h.u.a.ArgList] config file args: --jena /Users/stwi5210/Source/fis-harvester/facultySubjectAreas/vivo.model.xml --truncate 1
+2013-03-06 10:02:20.623 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-06 10:02:20.624 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_fm2sa_construct'
+2013-03-06 10:02:20.624 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-06 10:02:20.624 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-06 10:02:20.624 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-06 10:02:20.624 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-06 10:02:21.302 INFO  [o.v.h.u.r.JenaConnect] Removing all triples
+2013-03-06 10:02:21.365 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: End
+2013-03-06 10:02:22.094 INFO  [o.v.h.t.SPARQLTranslator] SPARQLTranslator: Start
+2013-03-06 10:02:22.097 DEBUG [o.v.h.u.a.ArgList] running SPARQLTranslator
+2013-03-06 10:02:22.098 DEBUG [o.v.h.u.a.ArgList] command line args: -X facultySubjectAreas.config.xml
+2013-03-06 10:02:22.104 DEBUG [o.v.h.u.a.ArgList] config file args: --input harvested-data.model.xml --input vivo-fac.model.xml --input vivo-sub.model.xml --sparqlConstruct create-query --output vivo.model.xml
+2013-03-06 10:02:22.111 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: urn&#58;x-arq&#58;UnionGraph
+2013-03-06 10:02:22.145 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph6421465394467571666.tdb  
+2013-03-06 10:02:22.145 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph6421465394467571666.tdb
+2013-03-06 10:02:22.717 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - 'data/harvested-data/'
+2013-03-06 10:02:22.717 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-03-06 10:02:24.361 TRACE [o.v.h.t.SPARQLTranslator] Input Model http://vivoweb.org/harvester/model/translate/model1 with 15751 statements
+2013-03-06 10:02:24.365 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-06 10:02:24.365 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_fm2sa_construct'
+2013-03-06 10:02:24.365 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-06 10:02:24.365 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-06 10:02:24.366 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-06 10:02:24.366 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-06 10:02:24.678 TRACE [o.v.h.t.SPARQLTranslator] Input Model http://vivoweb.org/harvester/model/translate/model2 with 0 statements
+2013-03-06 10:02:24.682 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-06 10:02:24.682 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_fm2sa_construct'
+2013-03-06 10:02:24.682 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-06 10:02:24.682 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-06 10:02:24.682 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-06 10:02:24.682 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-06 10:02:24.721 TRACE [o.v.h.t.SPARQLTranslator] Input Model http://vivoweb.org/harvester/model/translate/model3 with 0 statements
+2013-03-06 10:02:24.725 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-06 10:02:24.726 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_fm2sa_construct'
+2013-03-06 10:02:24.726 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-06 10:02:24.726 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-06 10:02:24.726 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-06 10:02:24.726 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-06 10:02:24.760 TRACE [o.v.h.t.SPARQLTranslator] PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX core: <http://vivoweb.org/ontology/core#>  Construct {  ?person <http://vivoweb.org/ontology/core#hasResearchArea> ?subject . } Where {  ?person <http://vivo.colorado.edu/ws_fm2sa_HASRESEARCHAREA> ?descRA .   ?subject rdfs:label ?desc .  FILTER((?desc)=(?descRA)) }
+2013-03-06 10:02:24.817 TRACE [o.v.h.t.SPARQLTranslator] Input Jena's Total Size: 15751
+2013-03-06 10:02:24.817 DEBUG [o.v.h.t.SPARQLTranslator] Executing Query
+2013-03-06 10:02:24.818 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: DEFAULT17533177
+2013-03-06 10:02:24.818 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT175331777485669243105908035.tdb  
+2013-03-06 10:02:24.818 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT175331777485669243105908035.tdb
+2013-03-06 10:02:25.360 DEBUG [o.v.h.t.SPARQLTranslator] <?xml version="1.0"?>
+<rdf:RDF
+    xmlns:geo="http://aims.fao.org/aos/geopolitical.owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:ero="http://purl.obolibrary.org/obo/"
+    xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions#"
+    xmlns:pvs="http://vivoweb.org/ontology/provenance-support#"
+    xmlns:dcelem="http://purl.org/dc/elements/1.1/"
+    xmlns:core="http://vivoweb.org/ontology/core#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:scires="http://vivoweb.org/ontology/scientific-research#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:vlocal="http://vivo.colorado.edu/ontology/vivo-fis#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+</rdf:RDF>
+
+2013-03-06 10:02:25.365 TRACE [o.v.h.t.SPARQLTranslator] Total Size of Constructed Output: 0
+2013-03-06 10:02:25.368 TRACE [o.v.h.t.SPARQLTranslator] Total Number of Elements: 0
+2013-03-06 10:02:25.368 INFO  [o.v.h.t.SPARQLTranslator] Translation: End
+2013-03-06 10:02:25.369 INFO  [o.v.h.t.SPARQLTranslator] SPARQLTranslator: End
+2013-03-06 10:02:25.382 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph6421465394467571666.tdb  
+2013-03-06 10:02:25.391 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT175331777485669243105908035.tdb  
+2013-03-06 10:02:26.137 INFO  [o.v.h.t.Transfer] Transfer: Start
+2013-03-06 10:02:26.142 DEBUG [o.v.h.u.a.ArgList] running Transfer
+2013-03-06 10:02:26.143 DEBUG [o.v.h.u.a.ArgList] command line args: -i vivo.model.xml -d data/constructed-data
+2013-03-06 10:02:26.157 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-06 10:02:26.158 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_fm2sa_construct'
+2013-03-06 10:02:26.158 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-06 10:02:26.158 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-06 10:02:26.158 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-06 10:02:26.158 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-06 10:02:26.853 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: DEFAULT1051430400
+2013-03-06 10:02:26.854 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT10514304003758783617097813165.tdb  
+2013-03-06 10:02:26.854 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT10514304003758783617097813165.tdb
+2013-03-06 10:02:27.034 DEBUG [o.v.h.t.Transfer] No Output Specified, Using In-Memory Jena Model As Temporary Model
+2013-03-06 10:02:27.186 INFO  [o.v.h.t.Transfer] Transfer: End
+2013-03-06 10:02:27.197 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT10514304003758783617097813165.tdb  

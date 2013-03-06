@@ -1,0 +1,31 @@
+2013-03-06 09:57:41.666 INFO  [o.v.h.f.CSVFetch] CSVFetch: Start
+2013-03-06 09:57:41.669 DEBUG [o.v.h.u.a.ArgList] running CSVFetch
+2013-03-06 09:57:41.670 DEBUG [o.v.h.u.a.ArgList] command line args: -X csvfetch.config.xml
+2013-03-06 09:57:41.676 DEBUG [o.v.h.u.a.ArgList] config file args: --propertyPrefix fsid_ --file /Users/stwi5210/fis_faculty_member_subject_areas.dat --uriPrefix ws_fm2sa_ --uriParameter FISID --type FACSUB --output /Users/stwi5210/Source/fis-harvester/facultySubjectAreas/harvested-data.model.xml --seperated , --namespace http://vivo.colorado.edu/
+2013-03-06 09:57:41.685 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - 'data/harvested-data/'
+2013-03-06 09:57:41.686 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-03-06 09:57:43.823 INFO  [o.v.h.f.CSVFetch] CSVFetch: End
+2013-03-06 09:57:44.756 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: Start
+2013-03-06 09:57:44.760 DEBUG [o.v.h.u.a.ArgList] running JenaConnect
+2013-03-06 09:57:44.760 DEBUG [o.v.h.u.a.ArgList] command line args: -X delete.config.xml
+2013-03-06 09:57:44.765 DEBUG [o.v.h.u.a.ArgList] config file args: --jena /Users/stwi5210/Source/fis-harvester/facultySubjectAreas/vivo.model.xml --truncate 1
+2013-03-06 09:57:44.769 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-06 09:57:44.770 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_fm2sa_construct'
+2013-03-06 09:57:44.770 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-06 09:57:44.770 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-06 09:57:44.770 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-06 09:57:44.770 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-06 09:57:45.491 INFO  [o.v.h.u.r.JenaConnect] Removing all triples
+2013-03-06 09:57:45.562 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: End
+2013-03-06 09:57:46.147 ERROR [o.v.h.t.SPARQLTranslator] Could not read from "file:///Users/stwi5210/Source/fis-harvester/facultySubjectAreas/departments.config.xml" because it is a not a file.
+2013-03-06 09:57:46.152 DEBUG [o.v.h.t.SPARQLTranslator] Stacktrace:
+org.apache.commons.vfs.FileSystemException: Could not read from "file:///Users/stwi5210/Source/fis-harvester/facultySubjectAreas/departments.config.xml" because it is a not a file.
+	at org.apache.commons.vfs.provider.AbstractFileObject.getInputStream(AbstractFileObject.java:1109) ~[commons-vfs-1.0.jar:1.0]
+	at org.apache.commons.vfs.provider.DefaultFileContent.getInputStream(DefaultFileContent.java:317) ~[commons-vfs-1.0.jar:1.0]
+	at org.vivoweb.harvester.util.FileAide.getInputStream(FileAide.java:158) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.args.ArgList$ConfigParser.parseConfig(ArgList.java:370) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.args.ArgList.<init>(ArgList.java:85) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.args.ArgParser.parse(ArgParser.java:125) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.InitLog.initLogger(InitLog.java:130) ~[harvester.jar:na]
+	at org.vivoweb.harvester.translate.SPARQLTranslator.main(SPARQLTranslator.java:197) ~[harvester.jar:na]
+2013-03-06 09:57:46.153 INFO  [o.v.h.t.SPARQLTranslator] SPARQLTranslator: End

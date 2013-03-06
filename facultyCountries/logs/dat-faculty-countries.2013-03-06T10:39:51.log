@@ -1,0 +1,43 @@
+2013-03-06 10:39:51.603 INFO  [o.v.h.f.CSVFetch] CSVFetch: Start
+2013-03-06 10:39:51.606 DEBUG [o.v.h.u.a.ArgList] running CSVFetch
+2013-03-06 10:39:51.607 DEBUG [o.v.h.u.a.ArgList] command line args: -X csvfetch.config.xml
+2013-03-06 10:39:51.613 DEBUG [o.v.h.u.a.ArgList] config file args: --propertyPrefix ws_fm2c_ --file /Users/stwi5210/fis_faculty_member_countries.dat --uriPrefix fsid_ --uriParameter FISID --type COUNTRY --output harvested-data.model.xml --seperated , --namespace http://vivo.colorado.edu/
+2013-03-06 10:39:51.623 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - 'data/harvested-data/'
+2013-03-06 10:39:51.623 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-03-06 10:39:53.379 INFO  [o.v.h.f.CSVFetch] CSVFetch: End
+2013-03-06 10:39:54.418 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: Start
+2013-03-06 10:39:54.421 DEBUG [o.v.h.u.a.ArgList] running JenaConnect
+2013-03-06 10:39:54.421 DEBUG [o.v.h.u.a.ArgList] command line args: -X delete.config.xml
+2013-03-06 10:39:54.425 DEBUG [o.v.h.u.a.ArgList] config file args: --jena vivo.model.xml --truncate 1
+2013-03-06 10:39:54.430 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-06 10:39:54.430 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_fm2c_construct'
+2013-03-06 10:39:54.430 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-06 10:39:54.431 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-06 10:39:54.431 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-06 10:39:54.431 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-06 10:39:54.998 INFO  [o.v.h.u.r.JenaConnect] Removing all triples
+2013-03-06 10:39:55.048 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: End
+2013-03-06 10:39:55.662 INFO  [o.v.h.t.SPARQLTranslator] SPARQLTranslator: Start
+2013-03-06 10:39:55.665 DEBUG [o.v.h.u.a.ArgList] running SPARQLTranslator
+2013-03-06 10:39:55.665 DEBUG [o.v.h.u.a.ArgList] command line args: -X facultyCountries.config.xml
+2013-03-06 10:39:55.671 DEBUG [o.v.h.u.a.ArgList] config file args: --input harvested-data.model.xml --input vivo-countries.model.xml --sparqlConstruct create-query --output vivo.model.xml
+2013-03-06 10:39:55.676 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: urn&#58;x-arq&#58;UnionGraph
+2013-03-06 10:39:55.703 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph7082655293636254593.tdb  
+2013-03-06 10:39:55.703 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph7082655293636254593.tdb
+2013-03-06 10:39:56.199 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - 'data/harvested-data/'
+2013-03-06 10:39:56.200 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-03-06 10:39:57.159 TRACE [o.v.h.t.SPARQLTranslator] Input Model http://vivoweb.org/harvester/model/translate/model1 with 7009 statements
+2013-03-06 10:39:57.160 ERROR [o.v.h.t.SPARQLTranslator] Could not read from "file:///Users/stwi5210/Source/fis-harvester/facultyCountries/vivo-countries.model.xml" because it is a not a file.
+2013-03-06 10:39:57.163 DEBUG [o.v.h.t.SPARQLTranslator] Stacktrace:
+org.apache.commons.vfs.FileSystemException: Could not read from "file:///Users/stwi5210/Source/fis-harvester/facultyCountries/vivo-countries.model.xml" because it is a not a file.
+	at org.apache.commons.vfs.provider.AbstractFileObject.getInputStream(AbstractFileObject.java:1109) ~[commons-vfs-1.0.jar:1.0]
+	at org.apache.commons.vfs.provider.DefaultFileContent.getInputStream(DefaultFileContent.java:317) ~[commons-vfs-1.0.jar:1.0]
+	at org.vivoweb.harvester.util.FileAide.getInputStream(FileAide.java:158) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.repo.JenaConnect.parseConfig(JenaConnect.java:118) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.repo.JenaConnect.parseConfig(JenaConnect.java:107) ~[harvester.jar:na]
+	at org.vivoweb.harvester.translate.SPARQLTranslator.prepDataset(SPARQLTranslator.java:160) ~[harvester.jar:na]
+	at org.vivoweb.harvester.translate.SPARQLTranslator.<init>(SPARQLTranslator.java:90) ~[harvester.jar:na]
+	at org.vivoweb.harvester.translate.SPARQLTranslator.<init>(SPARQLTranslator.java:75) ~[harvester.jar:na]
+	at org.vivoweb.harvester.translate.SPARQLTranslator.main(SPARQLTranslator.java:199) ~[harvester.jar:na]
+2013-03-06 10:39:57.164 INFO  [o.v.h.t.SPARQLTranslator] SPARQLTranslator: End
+2013-03-06 10:39:57.175 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph7082655293636254593.tdb  

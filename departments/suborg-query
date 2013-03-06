@@ -1,0 +1,9 @@
+PREFIX core: <http://vivoweb.org/ontology/core#> 
+PREFIX vlocal: <http://vivo.colorado.edu/ontology/vivo-fis#> 
+Construct {   
+  ?subDept core:subOrganizationWithin ?parentDept .     
+  ?parentDept core:hasSubOrganization ?subDept  }   
+Where {    
+  ?subDept <http://vivo.colorado.edu/ws_d_ORGANIZATIONWITHIN> ?parentId .     
+  ?parentDept vlocal:deptId ?parentId  
+}  

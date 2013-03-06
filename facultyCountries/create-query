@@ -1,0 +1,11 @@
+PREFIX core: <http://vivoweb.org/ontology/core#>  
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#>  
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   
+Construct {    
+ ?person <http://vivoweb.org/ontology/core#geographicFocus> ?country .    
+ ?country rdf:type core:GeographicRegion .  }  
+Where  {      
+ ?person <http://vivo.colorado.edu/ws_fm2c_URI> ?countryURI .      
+ ?country a core:Country .      
+ FILTER (fn:matches(?countryURI, str(?country)))  
+}

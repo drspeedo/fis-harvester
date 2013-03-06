@@ -1,0 +1,17 @@
+2013-03-04 16:17:15.740 INFO  [o.v.h.f.CSVFetch] CSVFetch: Start
+2013-03-04 16:17:15.743 DEBUG [o.v.h.u.a.ArgList] running CSVFetch
+2013-03-04 16:17:15.744 DEBUG [o.v.h.u.a.ArgList] command line args: -X csvfetch.config.xml
+2013-03-04 16:17:15.751 DEBUG [o.v.h.u.a.ArgList] config file args: --propertyPrefix ws_d_ --file /Users/stwi5210/fis_departments.dat --uriPrefix deptid_ --uriParameter DEPTID --type DEPT --output /Users/stwi5210/Source/fis-harvester/departments/harvested-data.model.xml --seperated , --namespace http://vivo.colorado.edu/
+2013-03-04 16:17:15.761 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - 'data/harvested-data/'
+2013-03-04 16:17:15.761 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-03-04 16:17:16.979 INFO  [o.v.h.f.CSVFetch] CSVFetch: End
+2013-03-04 16:17:18.246 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: Start
+2013-03-04 16:17:18.249 DEBUG [o.v.h.u.a.ArgList] running JenaConnect
+2013-03-04 16:17:18.250 DEBUG [o.v.h.u.a.ArgList] command line args: -X departments.config.xml
+2013-03-04 16:17:18.257 DEBUG [o.v.h.u.a.ArgList] config file args: --input /Users/stwi5210/Source/fis-harvester/departments/harvested-data.model.xml --input /Users/stwi5210/Source/fis-harvester/departments/vivo-main.model.xml --sparqlConstruct /Users/stwi5210/Source/fis-harvester/departments/create-query --output /Users/stwi5210/Source/fis-harvester/departments/vivo.model.xml
+2013-03-04 16:17:18.258 ERROR [o.v.h.u.r.JenaConnect] Must specify a jena model
+2013-03-04 16:17:18.263 DEBUG [o.v.h.u.r.JenaConnect] Stacktrace:
+java.lang.IllegalArgumentException: Must specify a jena model
+	at org.vivoweb.harvester.util.repo.JenaConnect.run(JenaConnect.java:866) ~[harvester.jar:na]
+	at org.vivoweb.harvester.util.repo.JenaConnect.main(JenaConnect.java:891) ~[harvester.jar:na]
+2013-03-04 16:17:18.267 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: End

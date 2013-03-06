@@ -1,0 +1,1211 @@
+2013-03-05 11:49:56.302 INFO  [o.v.h.f.CSVFetch] CSVFetch: Start
+2013-03-05 11:49:56.306 DEBUG [o.v.h.u.a.ArgList] running CSVFetch
+2013-03-05 11:49:56.306 DEBUG [o.v.h.u.a.ArgList] command line args: -X csvfetch.config.xml
+2013-03-05 11:49:56.315 DEBUG [o.v.h.u.a.ArgList] config file args: --propertyPrefix ws_d_ --file /Users/stwi5210/fis_departments.dat --uriPrefix deptid_ --uriParameter DEPTID --type DEPT --output /Users/stwi5210/Source/fis-harvester/departments/harvested-data.model.xml --seperated , --namespace http://vivo.colorado.edu/
+2013-03-05 11:49:56.328 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - '/Users/stwi5210/Source/fis-harvester/departments/data/harvested-data/'
+2013-03-05 11:49:56.328 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-03-05 11:49:57.457 INFO  [o.v.h.f.CSVFetch] CSVFetch: End
+2013-03-05 11:49:58.479 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: Start
+2013-03-05 11:49:58.482 DEBUG [o.v.h.u.a.ArgList] running JenaConnect
+2013-03-05 11:49:58.482 DEBUG [o.v.h.u.a.ArgList] command line args: -X delete.config.xml
+2013-03-05 11:49:58.487 DEBUG [o.v.h.u.a.ArgList] config file args: --jena /Users/stwi5210/Source/fis-harvester/departments/vivo.model.xml --truncate 1
+2013-03-05 11:49:58.492 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-05 11:49:58.492 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_d_construct'
+2013-03-05 11:49:58.492 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-05 11:49:58.492 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-05 11:49:58.493 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-05 11:49:58.493 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-05 11:49:59.101 INFO  [o.v.h.u.r.JenaConnect] Removing all triples
+2013-03-05 11:49:59.635 INFO  [o.v.h.u.r.JenaConnect] JenaConnect: End
+2013-03-05 11:50:00.287 INFO  [o.v.h.t.SPARQLTranslator] SPARQLTranslator: Start
+2013-03-05 11:50:00.290 DEBUG [o.v.h.u.a.ArgList] running SPARQLTranslator
+2013-03-05 11:50:00.290 DEBUG [o.v.h.u.a.ArgList] command line args: -X departments.config.xml
+2013-03-05 11:50:00.295 DEBUG [o.v.h.u.a.ArgList] config file args: --input /Users/stwi5210/Source/fis-harvester/departments/harvested-data.model.xml --input /Users/stwi5210/Source/fis-harvester/departments/vivo-main.model.xml --sparqlConstruct /Users/stwi5210/Source/fis-harvester/departments/create-query --output /Users/stwi5210/Source/fis-harvester/departments/vivo.model.xml
+2013-03-05 11:50:00.301 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: urn&#58;x-arq&#58;UnionGraph
+2013-03-05 11:50:00.328 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph750728636113202738.tdb  
+2013-03-05 11:50:00.329 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph750728636113202738.tdb
+2013-03-05 11:50:00.836 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - '/Users/stwi5210/Source/fis-harvester/departments/data/harvested-data/'
+2013-03-05 11:50:00.837 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-03-05 11:50:01.240 TRACE [o.v.h.t.SPARQLTranslator] Input Model http://vivoweb.org/harvester/model/translate/model1 with 858 statements
+2013-03-05 11:50:01.243 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-05 11:50:01.244 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/filegraph/tbox/vivo-core-1.5.owl'
+2013-03-05 11:50:01.244 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-05 11:50:01.244 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-05 11:50:01.244 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-05 11:50:01.244 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-05 11:50:01.920 TRACE [o.v.h.t.SPARQLTranslator] Input Model http://vivoweb.org/harvester/model/translate/model2 with 1942 statements
+2013-03-05 11:50:01.925 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-05 11:50:01.925 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_d_construct'
+2013-03-05 11:50:01.925 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-05 11:50:01.925 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-05 11:50:01.925 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-05 11:50:01.925 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-05 11:50:01.961 TRACE [o.v.h.t.SPARQLTranslator] PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX core: <http://vivoweb.org/ontology/core#> PREFIX vlocal: <http://vivo.colorado.edu/ontology/vivo-fis#> PREFIX fn: <http://www.w3.org/2005/xpath-functions#>  Construct {    ?dept <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?deptClass .    ?dept rdfs:label ?label .    ?dept vlocal:deptId ?deptId .    ?dept vitro:mostSpecificType ?deptClass . }  Where {    ?dept <http://vivo.colorado.edu/ws_d_NAME> ?label .    ?dept <http://vivo.colorado.edu/ws_d_DEPTID> ?deptId .    ?dept <http://vivo.colorado.edu/ws_d_TYPE> ?deptTypeURI .    ?dept <http://vivo.colorado.edu/ws_d_MONIKER> ?moniker .    FILTER (fn:matches(?deptTypeURI, str(?deptClass))) }
+2013-03-05 11:50:02.015 TRACE [o.v.h.t.SPARQLTranslator] Input Jena's Total Size: 2800
+2013-03-05 11:50:02.015 DEBUG [o.v.h.t.SPARQLTranslator] Executing Query
+2013-03-05 11:50:02.015 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: DEFAULT2063777399
+2013-03-05 11:50:02.016 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT20637773996581589358972305303.tdb  
+2013-03-05 11:50:02.016 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT20637773996581589358972305303.tdb
+2013-03-05 11:50:02.151 DEBUG [o.v.h.t.SPARQLTranslator] <?xml version="1.0"?>
+<rdf:RDF
+    xmlns:geo="http://aims.fao.org/aos/geopolitical.owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:ero="http://purl.obolibrary.org/obo/"
+    xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions#"
+    xmlns:pvs="http://vivoweb.org/ontology/provenance-support#"
+    xmlns:dcelem="http://purl.org/dc/elements/1.1/"
+    xmlns:core="http://vivoweb.org/ontology/core#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:scires="http://vivoweb.org/ontology/scientific-research#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:vlocal="http://vivo.colorado.edu/ontology/vivo-fis#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+</rdf:RDF>
+
+2013-03-05 11:50:02.154 TRACE [o.v.h.t.SPARQLTranslator] Total Size of Constructed Output: 0
+2013-03-05 11:50:02.157 TRACE [o.v.h.t.SPARQLTranslator] Total Number of Elements: 0
+2013-03-05 11:50:02.157 INFO  [o.v.h.t.SPARQLTranslator] Translation: End
+2013-03-05 11:50:02.157 INFO  [o.v.h.t.SPARQLTranslator] SPARQLTranslator: End
+2013-03-05 11:50:02.166 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph750728636113202738.tdb  
+2013-03-05 11:50:02.174 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT20637773996581589358972305303.tdb  
+2013-03-05 11:50:02.822 INFO  [o.v.h.t.SPARQLTranslator] SPARQLTranslator: Start
+2013-03-05 11:50:02.825 DEBUG [o.v.h.u.a.ArgList] running SPARQLTranslator
+2013-03-05 11:50:02.825 DEBUG [o.v.h.u.a.ArgList] command line args: -X departments-sub.config.xml
+2013-03-05 11:50:02.831 DEBUG [o.v.h.u.a.ArgList] config file args: --input harvested-data.model.xml --input vivo.model.xml --sparqlConstruct suborg-query --output vivo.model.xml
+2013-03-05 11:50:02.837 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: urn&#58;x-arq&#58;UnionGraph
+2013-03-05 11:50:02.864 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph1966675036617550133.tdb  
+2013-03-05 11:50:02.864 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph1966675036617550133.tdb
+2013-03-05 11:50:03.386 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - '/Users/stwi5210/Source/fis-harvester/departments/data/harvested-data/'
+2013-03-05 11:50:03.386 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-03-05 11:50:03.768 TRACE [o.v.h.t.SPARQLTranslator] Input Model http://vivoweb.org/harvester/model/translate/model1 with 858 statements
+2013-03-05 11:50:03.770 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-05 11:50:03.771 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_d_construct'
+2013-03-05 11:50:03.771 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-05 11:50:03.771 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-05 11:50:03.771 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-05 11:50:03.771 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-05 11:50:04.026 TRACE [o.v.h.t.SPARQLTranslator] Input Model http://vivoweb.org/harvester/model/translate/model2 with 0 statements
+2013-03-05 11:50:04.030 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-05 11:50:04.030 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_d_construct'
+2013-03-05 11:50:04.030 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-05 11:50:04.030 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-05 11:50:04.030 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-05 11:50:04.030 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-05 11:50:04.062 TRACE [o.v.h.t.SPARQLTranslator] PREFIX core: <http://vivoweb.org/ontology/core#> PREFIX vlocal: <http://vivo.colorado.edu/ontology/vivo-fis#> Construct {     ?subDept core:subOrganizationWithin ?parentDept .       ?parentDept core:hasSubOrganization ?subDept  }   Where {      ?subDept <http://vivo.colorado.edu/ws_d_ORGANIZATIONWITHIN> ?parentId .       ?parentDept vlocal:deptId ?parentId  }  
+2013-03-05 11:50:04.096 TRACE [o.v.h.t.SPARQLTranslator] Input Jena's Total Size: 858
+2013-03-05 11:50:04.096 DEBUG [o.v.h.t.SPARQLTranslator] Executing Query
+2013-03-05 11:50:04.097 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: DEFAULT2025712901
+2013-03-05 11:50:04.097 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT20257129014085245090043060100.tdb  
+2013-03-05 11:50:04.097 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT20257129014085245090043060100.tdb
+2013-03-05 11:50:04.216 DEBUG [o.v.h.t.SPARQLTranslator] <?xml version="1.0"?>
+<rdf:RDF
+    xmlns:geo="http://aims.fao.org/aos/geopolitical.owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:ero="http://purl.obolibrary.org/obo/"
+    xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions#"
+    xmlns:pvs="http://vivoweb.org/ontology/provenance-support#"
+    xmlns:dcelem="http://purl.org/dc/elements/1.1/"
+    xmlns:core="http://vivoweb.org/ontology/core#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:scires="http://vivoweb.org/ontology/scientific-research#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:vlocal="http://vivo.colorado.edu/ontology/vivo-fis#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+</rdf:RDF>
+
+2013-03-05 11:50:04.221 TRACE [o.v.h.t.SPARQLTranslator] Total Size of Constructed Output: 0
+2013-03-05 11:50:04.223 TRACE [o.v.h.t.SPARQLTranslator] Total Number of Elements: 0
+2013-03-05 11:50:04.224 INFO  [o.v.h.t.SPARQLTranslator] Translation: End
+2013-03-05 11:50:04.224 INFO  [o.v.h.t.SPARQLTranslator] SPARQLTranslator: End
+2013-03-05 11:50:04.235 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph1966675036617550133.tdb  
+2013-03-05 11:50:04.243 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT20257129014085245090043060100.tdb  
+2013-03-05 11:50:04.930 INFO  [o.v.h.t.SPARQLTranslator] SPARQLTranslator: Start
+2013-03-05 11:50:04.934 DEBUG [o.v.h.u.a.ArgList] running SPARQLTranslator
+2013-03-05 11:50:04.934 DEBUG [o.v.h.u.a.ArgList] command line args: -X departments-url.config.xml
+2013-03-05 11:50:04.940 DEBUG [o.v.h.u.a.ArgList] config file args: --input harvested-data.model.xml --input vivo.model.xml --sparqlConstruct url-query --output vivo.model.xml
+2013-03-05 11:50:04.946 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: urn&#58;x-arq&#58;UnionGraph
+2013-03-05 11:50:04.976 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph4603329046586588771.tdb  
+2013-03-05 11:50:04.976 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph4603329046586588771.tdb
+2013-03-05 11:50:05.515 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - '/Users/stwi5210/Source/fis-harvester/departments/data/harvested-data/'
+2013-03-05 11:50:05.515 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
+2013-03-05 11:50:05.893 TRACE [o.v.h.t.SPARQLTranslator] Input Model http://vivoweb.org/harvester/model/translate/model1 with 858 statements
+2013-03-05 11:50:05.896 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-05 11:50:05.896 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_d_construct'
+2013-03-05 11:50:05.896 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-05 11:50:05.896 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-05 11:50:05.896 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-05 11:50:05.897 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-05 11:50:06.150 TRACE [o.v.h.t.SPARQLTranslator] Input Model http://vivoweb.org/harvester/model/translate/model2 with 0 statements
+2013-03-05 11:50:06.154 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-05 11:50:06.154 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_d_construct'
+2013-03-05 11:50:06.154 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-05 11:50:06.154 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-05 11:50:06.154 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-05 11:50:06.154 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-05 11:50:06.186 TRACE [o.v.h.t.SPARQLTranslator] PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>  PREFIX vivo: <http://vivoweb.org/ontology/core#>   Construct {     _:Link rdf:type vivo:URLLink .       _:Link vitro:mostSpecificType vivo:URLLink .       _:Link vivo:linkURI ?url .       _:Link vivo:linkAnchorText "Webpage" .       ?dept vivo:webpage _:Link .       _:Link vivo:webpageOf ?dept  }  Where {     ?dept a <http://vivo.colorado.edu/DEPT> .       ?dept <http://vivo.colorado.edu/ws_d_WEBPAGE> ?url .  }
+2013-03-05 11:50:06.222 TRACE [o.v.h.t.SPARQLTranslator] Input Jena's Total Size: 858
+2013-03-05 11:50:06.222 DEBUG [o.v.h.t.SPARQLTranslator] Executing Query
+2013-03-05 11:50:06.223 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: DEFAULT48494213
+2013-03-05 11:50:06.223 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT48494213519433443868720503.tdb  
+2013-03-05 11:50:06.223 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT48494213519433443868720503.tdb
+2013-03-05 11:50:07.131 DEBUG [o.v.h.t.SPARQLTranslator] <?xml version="1.0"?>
+<rdf:RDF
+    xmlns:geo="http://aims.fao.org/aos/geopolitical.owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:ero="http://purl.obolibrary.org/obo/"
+    xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions#"
+    xmlns:pvs="http://vivoweb.org/ontology/provenance-support#"
+    xmlns:dcelem="http://purl.org/dc/elements/1.1/"
+    xmlns:core="http://vivoweb.org/ontology/core#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:scires="http://vivoweb.org/ontology/scientific-research#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:vlocal="http://vivo.colorado.edu/ontology/vivo-fis#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10225"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/cwa/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10176"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/math/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10202"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://bakerrap.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10106">
+    <core:webpage rdf:nodeID="A3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10332"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://cadswes.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10223">
+    <core:webpage rdf:nodeID="A5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10894">
+    <core:webpage rdf:nodeID="A6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10340"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/mechanical/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10723">
+    <core:webpage rdf:nodeID="A8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10126">
+    <core:webpage rdf:nodeID="A9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10184">
+    <core:webpage rdf:nodeID="A10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10112"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://cumuseum.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10212"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://ethnicstudies.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10243">
+    <core:webpage rdf:nodeID="A13"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10360"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/law/nrlc/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10975">
+    <core:webpage rdf:nodeID="A15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10889">
+    <core:webpage rdf:nodeID="A16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10224">
+    <core:webpage rdf:nodeID="A17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10106"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://jila.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10173">
+    <core:webpage rdf:nodeID="A18"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10080"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://cires.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10242">
+    <core:webpage rdf:nodeID="A20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10159"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://amath.colorado.edu/cmsms/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10742"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://cartss.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10167"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://chemistry.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10099">
+    <core:webpage rdf:nodeID="A24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10287">
+    <core:webpage rdf:nodeID="A25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10189">
+    <core:webpage rdf:nodeID="A26"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10238"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://history.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10261">
+    <core:webpage rdf:nodeID="A28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10723"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/ArtsSciences/PWR/index.html</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10221">
+    <core:webpage rdf:nodeID="A29"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10153"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/ArtsSciences/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10201">
+    <core:webpage rdf:nodeID="A31"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10231">
+    <core:webpage rdf:nodeID="A32"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10220">
+    <core:webpage rdf:nodeID="A33"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10175"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/intphys/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10860">
+    <core:webpage rdf:nodeID="A35"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10161"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://mcdb.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10241">
+    <core:webpage rdf:nodeID="A37"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10071">
+    <core:webpage rdf:nodeID="A38"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10124">
+    <core:webpage rdf:nodeID="A39"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10243"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://theatredance.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10944"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://commrap.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10212">
+    <core:webpage rdf:nodeID="A12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10222">
+    <core:webpage rdf:nodeID="A41"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10224"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://srap.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10250">
+    <core:webpage rdf:nodeID="A42"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10230">
+    <core:webpage rdf:nodeID="A43"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10202">
+    <core:webpage rdf:nodeID="A2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10060">
+    <core:webpage rdf:nodeID="A44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10894"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://jewishstudies.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10287"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/education/BUENO/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10112">
+    <core:webpage rdf:nodeID="A11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10160">
+    <core:webpage rdf:nodeID="A45"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10180">
+    <core:webpage rdf:nodeID="A46"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10299">
+    <core:webpage rdf:nodeID="A47"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10344"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.cs.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10170">
+    <core:webpage rdf:nodeID="A49"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10352">
+    <core:webpage rdf:nodeID="A50"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10228">
+    <core:webpage rdf:nodeID="A51"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10775">
+    <core:webpage rdf:nodeID="A52"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10201"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://hrap.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10214">
+    <core:webpage rdf:nodeID="A53"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10205"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://cips.colorado.edu</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10190">
+    <core:webpage rdf:nodeID="A55"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10225">
+    <core:webpage rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10762">
+    <core:webpage rdf:nodeID="A56"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10128">
+    <core:webpage rdf:nodeID="A57"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10369">
+    <core:webpage rdf:nodeID="A58"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10226">
+    <core:webpage rdf:nodeID="A59"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10340">
+    <core:webpage rdf:nodeID="A7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10216">
+    <core:webpage rdf:nodeID="A60"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10763">
+    <core:webpage rdf:nodeID="A61"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10161">
+    <core:webpage rdf:nodeID="A36"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10255">
+    <core:webpage rdf:nodeID="A62"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10298">
+    <core:webpage rdf:nodeID="A63"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10131"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://conted.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10071"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/ibs/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10197"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/honors/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10858"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.cuhonorsengineering.com</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10079"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://ibg.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10322">
+    <core:webpage rdf:nodeID="A68"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10236"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://frit.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10207"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://comm.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10234"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://cuart.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10362">
+    <core:webpage rdf:nodeID="A72"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10304">
+    <core:webpage rdf:nodeID="A73"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A72">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10362"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://music.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10238">
+    <core:webpage rdf:nodeID="A27"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10216"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://slhs.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A74">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10169"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://envs.colorado.edu</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10703">
+    <core:webpage rdf:nodeID="A75"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10128"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://envs.colorado.edu/about/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10184"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://polsci.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10775"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/atlas/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10208"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/Economics/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10742">
+    <core:webpage rdf:nodeID="A22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10170"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://geography.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10206"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://anthropology.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10237">
+    <core:webpage rdf:nodeID="A78"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10231"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://english.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10173"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/GeolSci/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10858">
+    <core:webpage rdf:nodeID="A66"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10344">
+    <core:webpage rdf:nodeID="A48"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10066">
+    <core:webpage rdf:nodeID="A79"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10324">
+    <core:webpage rdf:nodeID="A80"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10153">
+    <core:webpage rdf:nodeID="A30"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10316">
+    <core:webpage rdf:nodeID="A81"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10195"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://casa.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10221"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://iafs.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10334">
+    <core:webpage rdf:nodeID="A83"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10302">
+    <core:webpage rdf:nodeID="A84"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10319"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://ccar.colorado.edu/main.html</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A81">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10316"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://engineering.colorado.edu/herbst/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10160"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://ebio.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10889"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://globalstudiesrap.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10126"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/ArtsSciences/CHA/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10229">
+    <core:webpage rdf:nodeID="A86"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10080">
+    <core:webpage rdf:nodeID="A19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10099"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://instaar.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10219">
+    <core:webpage rdf:nodeID="A87"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10239">
+    <core:webpage rdf:nodeID="A88"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10334"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://ecee.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10169">
+    <core:webpage rdf:nodeID="A74"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10175">
+    <core:webpage rdf:nodeID="A34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10352"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/law/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10208">
+    <core:webpage rdf:nodeID="A76"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10197">
+    <core:webpage rdf:nodeID="A65"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A89">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10348"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://journalism.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A90">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10701"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://sobek.colorado.edu/SOC/SL/SL.html</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10079">
+    <core:webpage rdf:nodeID="A67"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10944">
+    <core:webpage rdf:nodeID="A40"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A79">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10066"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://ics.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10242"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://spanish.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10131">
+    <core:webpage rdf:nodeID="A64"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10234">
+    <core:webpage rdf:nodeID="A71"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10214"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/linguistics/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10763"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://cimb.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A87">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10219"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://socsci.colorado.edu/SOC/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10237"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://gsll.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10318">
+    <core:webpage rdf:nodeID="A91"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10332">
+    <core:webpage rdf:nodeID="A4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10228"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://classics.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10248">
+    <core:webpage rdf:nodeID="A92"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10220"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://wgst.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10860"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://rasei.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10207">
+    <core:webpage rdf:nodeID="A70"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10198">
+    <core:webpage rdf:nodeID="A93"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10299"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://emp.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10176">
+    <core:webpage rdf:nodeID="A1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A91">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10318"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/aerospace/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10762"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://cas.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10189"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://atoc.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10167">
+    <core:webpage rdf:nodeID="A23"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10223"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/farrand/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10233">
+    <core:webpage rdf:nodeID="A94"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10180"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://phys.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10319">
+    <core:webpage rdf:nodeID="A85"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10247">
+    <core:webpage rdf:nodeID="A95"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10369"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://ucblibraries.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A96">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10320"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/engineering/cas/public_html/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10348">
+    <core:webpage rdf:nodeID="A89"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10261"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/education/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10158">
+    <core:webpage rdf:nodeID="A97"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10195">
+    <core:webpage rdf:nodeID="A82"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10250"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://lasc.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10206">
+    <core:webpage rdf:nodeID="A77"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10298"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/engineering/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10304"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/engineering/EnvEng/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10124"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.eos.ucar.edu/hirdls/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10236">
+    <core:webpage rdf:nodeID="A69"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10360">
+    <core:webpage rdf:nodeID="A14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A93">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10198"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/masp/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10255"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://leeds.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A95">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10247"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/ArtsSciences/british/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A97">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10158"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://aps.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A88">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10239"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/philosophy/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A84">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10302"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://itp.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10322"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/engineering/BioServe/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10320">
+    <core:webpage rdf:nodeID="A96"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A94">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10233"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/FilmStudies/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10839">
+    <core:webpage rdf:nodeID="A98"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10222"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/communitystudies/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10159">
+    <core:webpage rdf:nodeID="A21"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10060"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://lasp.colorado.edu/home/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10241"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://rlst.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10229"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://humanities.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10701">
+    <core:webpage rdf:nodeID="A90"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10205">
+    <core:webpage rdf:nodeID="A54"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A99">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10331"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://ceae.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10703"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://leadershiprap.colorado.edu/leadership-rap/chancellors-leadership-studies-program</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivo.colorado.edu/deptid_10331">
+    <core:webpage rdf:nodeID="A99"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A98">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10839"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/lrap/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10190"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://psych.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10226"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://pacs-courses.colorado.edu/drupal_pacs/node/24</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A80">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10324"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/che/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10230"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://alc.colorado.edu/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10975"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://www.colorado.edu/GraduateSchool/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A92">
+    <rdf:type rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:webpageOf rdf:resource="http://vivo.colorado.edu/deptid_10248"/>
+    <vitro:mostSpecificType rdf:resource="http://vivoweb.org/ontology/core#URLLink"/>
+    <core:linkURI>http://centerwest.org/</core:linkURI>
+    <core:linkAnchorText>Webpage</core:linkAnchorText>
+  </rdf:Description>
+</rdf:RDF>
+
+2013-03-05 11:50:07.178 TRACE [o.v.h.t.SPARQLTranslator] Total Size of Constructed Output: 600
+2013-03-05 11:50:07.198 TRACE [o.v.h.t.SPARQLTranslator] Total Number of Elements: 200
+2013-03-05 11:50:07.198 INFO  [o.v.h.t.SPARQLTranslator] Translation: End
+2013-03-05 11:50:07.199 INFO  [o.v.h.t.SPARQLTranslator] SPARQLTranslator: End
+2013-03-05 11:50:07.210 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/urn&#58;x-arq&#58;UnionGraph4603329046586588771.tdb  
+2013-03-05 11:50:07.218 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT48494213519433443868720503.tdb  
+2013-03-05 11:50:08.195 INFO  [o.v.h.t.Transfer] Transfer: Start
+2013-03-05 11:50:08.199 DEBUG [o.v.h.u.a.ArgList] running Transfer
+2013-03-05 11:50:08.200 DEBUG [o.v.h.u.a.ArgList] command line args: -i vivo.model.xml -d data/constructed-data
+2013-03-05 11:50:08.212 TRACE [o.v.h.u.r.JenaConnect] 'dbLayout' - 'layout2'
+2013-03-05 11:50:08.212 TRACE [o.v.h.u.r.JenaConnect] 'modelName' - 'http://vitro.mannlib.cornell.edu/a/graph/ws_d_construct'
+2013-03-05 11:50:08.212 TRACE [o.v.h.u.r.JenaConnect] 'dbUrl' - 'jdbc:mysql://127.0.0.1:3306/uccs_vivo'
+2013-03-05 11:50:08.213 TRACE [o.v.h.u.r.JenaConnect] 'dbClass' - 'com.mysql.jdbc.Driver'
+2013-03-05 11:50:08.213 TRACE [o.v.h.u.r.JenaConnect] 'dbType' - 'MySQL'
+2013-03-05 11:50:08.213 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'sdb'
+2013-03-05 11:50:08.815 TRACE [o.v.h.u.r.MemJenaConnect] attempting to create temp file for: DEFAULT2034902784
+2013-03-05 11:50:08.816 TRACE [o.v.h.u.FileAide] Allocating temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT20349027842332198388662943978.tdb  
+2013-03-05 11:50:08.817 TRACE [o.v.h.u.r.MemJenaConnect] created: /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT20349027842332198388662943978.tdb
+2013-03-05 11:50:08.992 DEBUG [o.v.h.t.Transfer] No Output Specified, Using In-Memory Jena Model As Temporary Model
+2013-03-05 11:50:09.407 INFO  [o.v.h.t.Transfer] Transfer: End
+2013-03-05 11:50:09.416 TRACE [o.v.h.u.FileAide] Deleted temporary file space /var/folders/lj/qj39hmyx0_n2syq8ht7bdlym0000gp/T/DEFAULT20349027842332198388662943978.tdb  

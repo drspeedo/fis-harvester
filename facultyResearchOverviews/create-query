@@ -1,0 +1,12 @@
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX core: <http://vivoweb.org/ontology/core#>
+Construct
+{
+ ?person core:researchOverview ?ResearchOverview .
+}
+Where
+{
+ ?person a <http://vivo.colorado.edu/RESEARCHOVERVIEW> . 
+ ?person <http://vivo.colorado.edu/ws_fm2ro_RESEARCHOVERVIEW> ?ResearchOverview . 
+} 

@@ -1,0 +1,36 @@
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>  
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX core: <http://vivoweb.org/ontology/core#>  
+PREFIX vlocal: <http://vivo.colorado.edu/ontology/vivo-fis#>  
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#>   
+Construct  {    
+ ?position rdf:type ?positionClass .     
+ ?position rdfs:label ?label .     
+ ?position core:positionForPerson ?person .     
+ ?position core:positionInOrganization ?dept .     
+ ?position core:rank ?rank .     
+ ?person core:personInPosition ?position .     
+ ?dept core:organizationForPosition ?position .  
+}  
+Where  {     
+ ?position <http://vivo.colorado.edu/ws_fm2p_RANK> ?rank .     
+ ?position rdf:type <http://vivo.colorado.edu/ws_fm2p> .     
+ ?position <http://vivo.colorado.edu/ws_fm2p_NAME> ?label .     
+ {         
+  ?position <http://vivo.colorado.edu/ws_fm2p_TYPE> ?type .        
+  ?positionClass rdfs:subClassOf core:Position .     
+  FILTER(fn:matches(?type, str(?positionClass)))     
+ }     
+ {        
+  ?position <http://vivo.colorado.edu/ws_fm2p_DEPTID> ?deptIRI .        
+  ?deptClass rdfs:subClassOf foaf:Organization .        
+  ?dept rdf:type ?deptClass .      
+  FILTER(fn:matches(?deptIRI, str(?dept)))      
+ }     
+ {        
+  ?position <http://vivo.colorado.edu/ws_fm2p_FISID> ?personIRI .        
+  ?person rdf:type foaf:Person .      
+  FILTER(fn:matches(?personIRI, str(?person)))      
+ }  
+} 

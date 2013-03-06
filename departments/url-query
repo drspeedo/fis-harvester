@@ -1,0 +1,14 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  
+PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>  
+PREFIX vivo: <http://vivoweb.org/ontology/core#>   
+Construct {   
+  _:Link rdf:type vivo:URLLink .     
+  _:Link vitro:mostSpecificType vivo:URLLink .     
+  _:Link vivo:linkURI ?url .     
+  _:Link vivo:linkAnchorText "Webpage" .     
+  ?dept vivo:webpage _:Link .     
+  _:Link vivo:webpageOf ?dept  }  
+Where {   
+  ?dept a <http://vivo.colorado.edu/DEPT> .     
+  ?dept <http://vivo.colorado.edu/ws_d_WEBPAGE> ?url .  
+}
