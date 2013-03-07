@@ -1,7 +1,0 @@
-2013-03-05 10:37:28.565 INFO  [o.v.h.f.CSVFetch] CSVFetch: Start
-2013-03-05 10:37:28.568 DEBUG [o.v.h.u.a.ArgList] running CSVFetch
-2013-03-05 10:37:28.569 DEBUG [o.v.h.u.a.ArgList] command line args: -X csvfetch.config.xml
-2013-03-05 10:37:28.576 DEBUG [o.v.h.u.a.ArgList] config file args: --propertyPrefix ws_d_ --file /Users/stwi5210/fis_departments.dat --uriPrefix deptid_ --uriParameter DEPTID --type DEPT --output /Users/stwi5210/Source/fis-harvester/departments/harvested-data.model.xml --seperated , --namespace http://vivo.colorado.edu/
-2013-03-05 10:37:28.585 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - '/Users/stwi5210/Source/fis-harvester/departments/data/harvested-data/'
-2013-03-05 10:37:28.585 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
-2013-03-05 10:37:29.574 INFO  [o.v.h.f.CSVFetch] CSVFetch: End

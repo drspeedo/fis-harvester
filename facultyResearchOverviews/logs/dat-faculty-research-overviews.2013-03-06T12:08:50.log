@@ -1,24 +1,0 @@
-2013-03-06 12:08:50.811 INFO  [o.v.h.f.CSVFetch] CSVFetch: Start
-2013-03-06 12:08:50.814 DEBUG [o.v.h.u.a.ArgList] running CSVFetch
-2013-03-06 12:08:50.814 DEBUG [o.v.h.u.a.ArgList] command line args: -X csvfetch.config.xml
-2013-03-06 12:08:50.821 DEBUG [o.v.h.u.a.ArgList] config file args: --propertyPrefix ws_fm2ro_ --file /Users/stwi5210/fis_faculty_member_research_overviews.dat --uriPrefix fsid_ --uriParameter FISID --type RESEARCHOVERVIEW --output harvested-data.model.xml --seperated , --namespace http://vivo.colorado.edu/
-2013-03-06 12:08:50.831 TRACE [o.v.h.u.r.JenaConnect] 'dbDir' - 'data/harvested-data/'
-2013-03-06 12:08:50.831 TRACE [o.v.h.u.r.JenaConnect] 'type' - 'tdb'
-2013-03-06 12:08:52.417 ERROR [o.v.h.f.CSVFetch] cannot encode (char)  in context XML
-2013-03-06 12:08:52.421 DEBUG [o.v.h.f.CSVFetch] Stacktrace:
-com.hp.hpl.jena.shared.CannotEncodeCharacterException: cannot encode (char)  in context XML
-	at com.hp.hpl.jena.rdf.model.impl.Util.substituteEntitiesInElementContent(Util.java:188) ~[jena-2.6.4.jar:na]
-	at com.hp.hpl.jena.xmloutput.impl.Basic.writeLiteral(Basic.java:168) ~[jena-2.6.4.jar:na]
-	at com.hp.hpl.jena.xmloutput.impl.Basic.writePredicate(Basic.java:104) ~[jena-2.6.4.jar:na]
-	at com.hp.hpl.jena.xmloutput.impl.Basic.writeRDFStatements(Basic.java:77) ~[jena-2.6.4.jar:na]
-	at com.hp.hpl.jena.xmloutput.impl.Basic.writeRDFStatements(Basic.java:66) ~[jena-2.6.4.jar:na]
-	at com.hp.hpl.jena.xmloutput.impl.Basic.writeBody(Basic.java:40) ~[jena-2.6.4.jar:na]
-	at com.hp.hpl.jena.xmloutput.impl.BaseXMLWriter.writeXMLBody(BaseXMLWriter.java:500) ~[jena-2.6.4.jar:na]
-	at com.hp.hpl.jena.xmloutput.impl.BaseXMLWriter.write(BaseXMLWriter.java:472) ~[jena-2.6.4.jar:na]
-	at org.vivoweb.harvester.util.repo.JenaConnect.exportRdfToStream(JenaConnect.java:278) ~[harvester.jar:na]
-	at org.vivoweb.harvester.util.repo.JenaConnect.exportRdfToStream(JenaConnect.java:260) ~[harvester.jar:na]
-	at org.vivoweb.harvester.util.repo.JenaConnect.exportRdfToString(JenaConnect.java:302) ~[harvester.jar:na]
-	at org.vivoweb.harvester.util.repo.JenaConnect.exportRdfToString(JenaConnect.java:289) ~[harvester.jar:na]
-	at org.vivoweb.harvester.fetch.CSVFetch.execute(CSVFetch.java:244) ~[harvester.jar:na]
-	at org.vivoweb.harvester.fetch.CSVFetch.main(CSVFetch.java:324) ~[harvester.jar:na]
-2013-03-06 12:08:52.422 INFO  [o.v.h.f.CSVFetch] CSVFetch: End
