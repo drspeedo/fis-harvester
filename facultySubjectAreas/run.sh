@@ -67,6 +67,9 @@ harvester-sparqltranslator -X facultySubjectAreas.config.xml
 # Save a copy of the model for restoration
 harvester-transfer -i vivo.model.xml -d data/constructed-data
 
+cp data/constructed-data ../backups/facultySubjectAreas-data-$DATE
+cp data/constructed-data ../backups/facultySubjectAreas-data-last
+
 #Output some counts
 
 FAC=`cat data/constructed-data | grep '<rdf:Description rdf:about="http://vivo.colorado.edu/fsid_' | wc -l`

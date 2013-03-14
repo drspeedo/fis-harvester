@@ -11,6 +11,6 @@
 	<!--QUERY -->
 	<Param name="sparqlConstruct">url-query</Param>
 	<!--OUTPUT-->
-	<Param name="output">url-data.model.xml</Param>
+	<Param name="output">vivo.model.xml</Param>
 	<!-- -->
 </Task>

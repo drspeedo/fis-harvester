@@ -6,15 +6,13 @@
 -->
 <Task>
 	<!--INPUT -->
-	<Param name="inputModel">url-data.model.xml</Param>
+	<Param name="inputModel">vivo.model.xml</Param>
 	<Param name="outputModel">vivo.model.xml</Param>
 	
-	<!--  VIVO -->
-	<Param name="dedupModel">vivo.model.xml</Param>
 	
 	<!-- Namespace -->
 	<Param name="namespaceEtc">http://vivo.colorado.edu/individual/</Param>
-	<Param name="property">http://vivoweb.org/ontology/core#webpageOf</Param>
+	<Param name="pattern">durl</Param>
 	
 	<!--  OPTIONS -->
 </Task>
