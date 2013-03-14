@@ -1,0 +1,47 @@
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>   
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>   
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>   
+PREFIX core: <http://vivoweb.org/ontology/core#>   
+PREFIX vlocal: <http://vivo.colorado.edu/ontology/vivo-fis#>   
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#>    
+Construct  { 
+    _:DateTimeValue rdf:type core:DateTimeValue . 
+    _:DateTimeValue core:dateTime ?year . 
+    _:DateTimeValue core:dateTimePrecision core:yearPrecision . 
+    _:DateTimeInterval rdf:type core:DateTimeInterval . 
+    _:DateTimeInterval core:dateTimeValue _:DateTimeValue . 
+    _:DateTimeInterval core:end _:DateTimeValue . 
+    ?EducationalTraining rdf:type core:EducationalTraining . 
+    ?EducationalTraining core:educationalTrainingOf ?FacultyMember . 
+    ?EducationalTraining core:outcome ?AcademicDegree . 
+    ?EducationalTraining core:degreeEarned ?AcademicDegree . 
+    ?EducationalTraining core:dateTimeInterval _:DateTimeInterval . 
+    ?EducationalTraining core:trainingAtOrganization ?University . 
+    ?EducationalTraining core:rank ?rank . 
+    ?AcademicDegree core:outcomeOf ?EducationalTraining . 
+    ?AcademicDegree core:degreeOutcomeOf ?EducationalTraining . 
+    ?FacultyMember core:educationalTraining ?EducationalTraining . 
+    ?University core:organizationForTraining ?EducationalTraining  
+}   
+Where { 
+    ?EducationalTraining <${namespace}ws_fm2dg_RANK> ?rank . 
+    ?EducationalTraining rdf:type <${namespace}ws_fm2dg> . 
+    { 
+        ?EducationalTraining <${namespace}ws_fm2dg_URI> ?type . 
+        ?AcademicDegree rdf:type core:AcademicDegree . 
+        FILTER(fn:ends-with(str(?AcademicDegree), ?type)) . 
+    } { 
+        ?EducationalTraining <${namespace}ws_fm2dg_FISID> ?personIRI . 
+        ?FacultyMember rdf:type foaf:Person . 
+        FILTER(fn:matches(str(?FacultyMember), ?personIRI)) . 
+    } OPTIONAL  { 
+        ?EducationalTraining <${namespace}ws_fm2dg_UNITIDCODE> ?unitID . 
+        ?unitClass rdfs:subClassOf foaf:Organization . 
+        ?University rdf:type ?unitClass . 
+        FILTER(fn:matches(?unitID, str(?University))) . 
+    } OPTIONAL  { 
+        ?EducationalTraining <${namespace}ws_fm2dg_YEAR> ?year . 
+        # BIND(iri(concat(str(?EducationalTraining), 'dtv')) AS ?DateTimeValue) . 
+        # BIND(iri(concat(str(?EducationalTraining), 'dti')) AS ?DateTimeInterval) . 
+    } 
+}  

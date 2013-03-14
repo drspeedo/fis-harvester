@@ -20,5 +20,5 @@
 	<!--URI Parameter-->
 	<Param name="uriParameter">FISID</Param>
 	<!--URI Prefix-->
-	<Param name="uriPrefix">fsid_</Param>
+	<Param name="uriPrefix">fis_</Param>
 </Task>

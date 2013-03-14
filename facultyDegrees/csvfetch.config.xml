@@ -6,7 +6,7 @@
 -->
 <Task>
 	<!--INPUT -->
-	<Param name="file">/Users/stwi5210/fis_faculty_member_regions.dat</Param>	
+	<Param name="file">/Users/stwi5210/fis_faculty_member_degrees.dat</Param>	
 	<!--SEPERATOR -->
 	<Param name="seperated">,</Param>	
 	<!--OUTPUT -->
@@ -14,11 +14,8 @@
 	<!--NAMESPACE -->
 	<Param name="namespace">http://vivo.colorado.edu/</Param>
 	<!--TYPE-->
-	<Param name="type">REGION</Param>
+	<Param name="type">DEGREES</Param>
 	<!--PropertyPrefix -->
-	<Param name="propertyPrefix">ws_fm2r_</Param>
-	<!--URI Parameter-->
-	<Param name="uriParameter">FISID</Param>
-	<!--URI Prefix-->
-	<Param name="uriPrefix">fis_</Param>
+	<Param name="propertyPrefix">ws_fm2dg_</Param>
+
 </Task>
